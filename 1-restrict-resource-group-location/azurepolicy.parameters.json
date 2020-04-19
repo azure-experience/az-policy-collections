@@ -1,0 +1,16 @@
+{
+ "listofLocationsinIndia": {
+        "type": "array",
+        "metadata": {
+            "description": "pre-selected regions within india",
+            "strongType": "location",
+            "display Name": "pre-selected regions within india"
+        },
+        "defaultValue": [ "southindia" ],
+        "allowedValues": [
+            "southindia",
+            "centralindia",
+            "westindia"
+        ]
+    }
+}

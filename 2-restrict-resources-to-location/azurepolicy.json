@@ -1,0 +1,29 @@
+{
+ "if": {
+    "allOf": [
+        {
+            "field": "location",
+            "notIn": "[parameters('listofLocationsinIndia')]"
+        },
+        {
+        "anyOf": [
+                {
+                "field": "type",
+                "like": "Microsoft.Storage/*"
+                },
+                {
+                "field": "type",
+                "like": "Microsoft.Network/*"
+                },
+                {
+                "field": "type",
+                "like": "Microsoft.Compute/*"
+                }
+            ]
+        }
+    ]
+ },
+"then": {
+        "effect": "Deny"
+        }
+}

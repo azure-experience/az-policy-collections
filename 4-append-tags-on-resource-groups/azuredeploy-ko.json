@@ -1,0 +1,37 @@
+{
+    "properties": {
+      "displayName": "Deploy only in India",
+      "description": "This policy enables you to specify only India locations to create a resources",
+      "mode": "All",
+      "policyType": "custom",
+      "metadata": {
+        "version": "1.0.0",
+        "category": "Location"
+      },
+      "parameters": {
+        "location": {
+            "type": "string",
+            "defaultValue": "southindia",
+            "allowedValues": [
+              "southindia",
+              "centralindia",
+              "westindia"
+            ],
+            "metadata": {
+              "description": "Host all resources within india"
+            }
+          }
+        },
+      "policyRule": {
+        "if": {
+          "not": {
+              "field": "location",
+              "in": "[parameters('location')]"
+            }
+        },
+        "then": {
+          "effect": "Deny"
+        }
+      }
+    }
+}

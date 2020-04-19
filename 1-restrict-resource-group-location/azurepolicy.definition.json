@@ -1,0 +1,8 @@
+{
+    "description": "enforce creation of resource groups in india location only",
+    "displayName": "restrict-rg-creation-india",
+    "mode": "all",
+    "metadata": {
+        "version": "1.0.0"
+    }
+}
